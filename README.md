@@ -1,6 +1,6 @@
 # timeout
 
-TODO: Write a description here
+Timeout implementation for Crystal.
 
 ## Installation
 
@@ -18,11 +18,17 @@ dependencies:
 require "timeout"
 ```
 
-TODO: Write usage instructions here
+Sample:
+```
+res = Timeout.timeout(0.1) do
+  puts "this line will be printed"
+  sleep 0.2
+  puts "this line won't be printed"
+end
 
-## Development
-
-TODO: Write development instructions here
+# will print false
+puts "Result: #{res}"
+```
 
 ## Contributing
 
